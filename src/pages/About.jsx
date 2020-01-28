@@ -17,7 +17,9 @@ class About extends Component {
           time building a React application from scratch, and using Material UI!
         </Typography>
         <Link href="https://github.com/neilgagne" variant="body2">
-          <Typography variant="overline">Visit me at GitHub!</Typography>
+          <Typography variant="overline">
+            Visit Neil Gagne at GitHub!
+          </Typography>
         </Link>
       </Box>
     );
