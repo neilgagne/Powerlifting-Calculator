@@ -1,4 +1,20 @@
 .App {
+  /* Baby pink -> Grey */
+  /* background: rgb(242, 242, 242);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 1) 50%,
+    rgba(242, 205, 207, 1) 100%
+  ); */
+
+  /* Aqua -> Mint */
+  background: rgb(242, 242, 242);
+  background: linear-gradient(
+    180deg,
+    rgba(130, 216, 213, 0.5) 50%,
+    rgba(94, 200, 229, 0.75) 100%
+  );
+
   text-align: center;
 }
 
