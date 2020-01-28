@@ -1,11 +1,10 @@
 .App {
-  /* Baby pink -> Grey */
-  /* background: rgb(242, 242, 242);
+  background: rgb(242, 242, 242);
   background: linear-gradient(
     180deg,
     rgba(242, 242, 242, 1) 50%,
     rgba(242, 205, 207, 1) 100%
-  ); */
+  );
 
   /* Aqua -> Mint */
   background: rgb(242, 242, 242);
@@ -37,7 +36,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(223, 27, 27);
 }
 
 .App-link {
