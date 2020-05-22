@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-// Material
+// Material UI
 import { Box, Grid } from "@material-ui/core";
 
 // Components
@@ -12,6 +12,9 @@ import ResultDisplay from "../components/ResultDisplay";
 import { Formulas } from "../models/Formulas.js";
 import { RoundMethods } from "../models/RoundMethods.js";
 
+/**
+ * Tool used to calculate projected one-rep-max with a number of reps and a given weight
+ */
 class Calculate extends Component {
   // Used to update page title and close the app menu
   componentDidMount() {
@@ -48,25 +51,25 @@ class Calculate extends Component {
     roundMethod: this.initRoundMethod,
     weight: this.initWeight,
     reps: this.initReps,
-    projectedMax: this.initProjectedMax
+    projectedMax: this.initProjectedMax,
   };
 
   // OnChange of the Weight input
-  onWeightChanged = weight => {
+  onWeightChanged = (weight) => {
     this.setState({ weight }, () => {
       this.updateProjectedOneRepMax();
     });
   };
 
   // OnChange of the Reps input
-  onRepsChanged = reps => {
+  onRepsChanged = (reps) => {
     this.setState({ reps }, () => {
       this.updateProjectedOneRepMax();
     });
   };
 
   // OnChange of the Formula input
-  onFormulaChanged = formulaSelected => {
+  onFormulaChanged = (formulaSelected) => {
     if (formulaSelected === this.formulas.Epley.value) {
       let formula = this.formulas.Epley;
       this.setState({ formula }, () => {
@@ -106,7 +109,7 @@ class Calculate extends Component {
   };
 
   // Used to set rounding method and update projected one-rep max
-  onRoundingChanged = roundMethod => {
+  onRoundingChanged = (roundMethod) => {
     if (roundMethod === this.roundMethods.RoundUp.value) {
       this.setState({ roundMethod: this.roundMethods.RoundUp }, () => {
         this.updateProjectedOneRepMax();
@@ -176,7 +179,7 @@ class Calculate extends Component {
                     this.formulas.Lombardi,
                     this.formulas.Mayhew,
                     this.formulas.Oconner,
-                    this.formulas.Wathen
+                    this.formulas.Wathen,
                   ]}
                   value={this.state.formula.value}
                   onChange={this.onFormulaChanged}
@@ -191,7 +194,7 @@ class Calculate extends Component {
                   items={[
                     this.roundMethods.RoundUp,
                     this.roundMethods.RoundDown,
-                    this.roundMethods.RoundNearest
+                    this.roundMethods.RoundNearest,
                   ]}
                   value={this.state.roundMethod.value}
                   onChange={this.onRoundingChanged}

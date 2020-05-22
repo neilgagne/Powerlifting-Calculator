@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
+// Material UI
 import { Input, InputLabel, FormControl } from "@material-ui/core";
 
+/**
+ * A numeric input with two arrows to increase and decrease the value
+ */
 class Stepper extends Component {
-  // Used to propogate changes to state
-  updateValue = e => {
+  updateValue = (e) => {
     this.props.onChange(e.target.value);
   };
 
@@ -12,7 +15,7 @@ class Stepper extends Component {
     return (
       <FormControl
         style={{
-          width: "100%"
+          width: "100%",
         }}
       >
         <InputLabel id={this.props.labelId}>{this.props.labelText}</InputLabel>
@@ -28,7 +31,7 @@ class Stepper extends Component {
             min: this.props.min,
             max: this.props.max,
             type: "number",
-            "aria-labelledby": "input-slider"
+            "aria-labelledby": "input-slider",
           }}
         />
       </FormControl>

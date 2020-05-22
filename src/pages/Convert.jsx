@@ -51,11 +51,11 @@ class Convert extends Component {
     conversions: this.conversions,
     conversion: this.initConversion,
     weight: this.initWeight,
-    convertedWeight: this.initConvertedWeight
+    convertedWeight: this.initConvertedWeight,
   };
 
   // OnChange of the Conversion input
-  onConversionChanged = conversion => {
+  onConversionChanged = (conversion) => {
     if (conversion === this.conversions.PoundsToKilograms.value) {
       this.setState({ conversion: this.conversions.PoundsToKilograms }, () => {
         this.updateConvertedWeight();
@@ -68,7 +68,7 @@ class Convert extends Component {
   };
 
   // OnChange of the Weight input
-  onWeightChanged = weight => {
+  onWeightChanged = (weight) => {
     this.setState({ weight });
     this.updateConvertedWeight();
   };
@@ -96,7 +96,7 @@ class Convert extends Component {
                   inputId="conversion-input"
                   items={[
                     this.state.conversions.PoundsToKilograms,
-                    this.state.conversions.KilogramsToPounds
+                    this.state.conversions.KilogramsToPounds,
                   ]}
                   value={this.state.conversion.value}
                   onChange={this.onConversionChanged}

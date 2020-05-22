@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
+// Material UI
 import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
 
+/**
+ * A selectbox input
+ */
 class SelectBox extends Component {
-  // Used to propogate changes to state
-  updateValue = e => {
+  updateValue = (e) => {
     this.props.onChange(e.target.value);
   };
 
@@ -21,7 +24,7 @@ class SelectBox extends Component {
           width={1}
           align={"left"}
         >
-          {this.props.items.map(item => (
+          {this.props.items.map((item) => (
             <MenuItem key={item.value} value={item.value}>
               {item.label}
             </MenuItem>

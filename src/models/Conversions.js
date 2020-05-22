@@ -1,4 +1,6 @@
-// A single conversion type
+/**
+ * A single conversion type
+ */
 export class Conversion {
   constructor(value, label, calculate) {
     this.value = value;
@@ -7,14 +9,16 @@ export class Conversion {
   }
 }
 
-// A collection of conversion types
+/**
+ * A collection of conversion types
+ */
 export class Conversions {
-  PoundsToKilograms = new Conversion(1, "Pounds to Kilograms", function(
+  PoundsToKilograms = new Conversion(1, "Pounds to Kilograms", function (
     weight
   ) {
     return weight / 2.205;
   });
-  KilogramsToPounds = new Conversion(2, "Kilograms to Pounds", function(
+  KilogramsToPounds = new Conversion(2, "Kilograms to Pounds", function (
     weight
   ) {
     return weight * 2.205;

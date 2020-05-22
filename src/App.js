@@ -12,20 +12,23 @@ import {
   Paper,
   Grid,
   MenuItem,
-  Menu
+  Menu,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-// My Components
+// Pages
 import Calculate from "./pages/Calculate";
 import About from "./pages/About";
 import Convert from "./pages/Convert";
 
+/**
+ * App with tools for weight conversion and calculation
+ */
 class App extends Component {
   state = {
     anchorE1: null,
     elevation: 2,
-    title: null
+    title: null,
   };
 
   // OnHover of the Paper element
@@ -39,7 +42,7 @@ class App extends Component {
   };
 
   // Open the menu
-  openMenu = event => {
+  openMenu = (event) => {
     this.setState({ anchorE1: event.currentTarget });
   };
 
@@ -49,7 +52,7 @@ class App extends Component {
   };
 
   // Called by ComponentDidMount on Route content
-  onPageLoad = path => {
+  onPageLoad = (path) => {
     if (path === "/") {
       this.setState({ title: "One-Rep Max Projection" });
     } else if (path === "/convert") {
@@ -75,7 +78,7 @@ class App extends Component {
                 style={{
                   backgroundColor: "rgba(255, 255, 255,0.95)",
                   padding: 8,
-                  paddingTop: 0
+                  paddingTop: 0,
                 }}
                 square={false}
                 className="Paper"
@@ -88,7 +91,7 @@ class App extends Component {
                   <div
                     style={{
                       width: "100%",
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     <Toolbar style={{ padding: 0 }}>
@@ -102,7 +105,7 @@ class App extends Component {
                       <Typography
                         variant="h6"
                         style={{
-                          flexGrow: 1
+                          flexGrow: 1,
                         }}
                       >
                         {this.state.title}
